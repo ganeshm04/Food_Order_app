@@ -4,8 +4,7 @@ A full-stack food delivery order management system built with React, TypeScript,
 
 ## 🚀 Live Demo
 
-- **Frontend**: [https://your-frontend-url.vercel.app](https://your-frontend-url.vercel.app)
-- **Backend API**: [https://your-backend-url.vercel.app/api](https://your-backend-url.vercel.app/api)
+- **Application**: [https://food-order-frontend-xi.vercel.app/]
 
 ## 📋 Table of Contents
 
