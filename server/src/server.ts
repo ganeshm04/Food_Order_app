@@ -145,6 +145,20 @@ const startServer = async (): Promise<void> => {
   }
 };
 
+// Connect to database immediately for serverless environment
+// This ensures DB is connected before handling requests
+const connectDB = async () => {
+  try {
+    await connectDatabase();
+    console.log('✅ MongoDB connected');
+  } catch (error) {
+    console.error('❌ MongoDB connection failed:', error);
+  }
+};
+
+// Connect DB immediately
+connectDB();
+
 // Start the server (only if not in Vercel serverless environment)
 if (process.env.VERCEL !== '1') {
   startServer();
