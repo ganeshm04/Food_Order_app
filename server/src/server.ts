@@ -145,8 +145,10 @@ const startServer = async (): Promise<void> => {
   }
 };
 
-// Start the server
-startServer();
+// Start the server (only if not in Vercel serverless environment)
+if (process.env.VERCEL !== '1') {
+  startServer();
+}
 
-// Export app for testing
+// Export app for Vercel serverless functions
 export default app;
